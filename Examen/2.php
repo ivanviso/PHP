@@ -40,3 +40,4 @@ for ($i=0; $i < 4; $i++) {
     echo "|",$cuatroxcuatro[$i][0]; // Nos muestra los elementos del array.
 }
 echo "|";
+?>

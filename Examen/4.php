@@ -35,4 +35,5 @@ switch ($edad) {
         echo "Senior";
         break;
 }
+
 ?>
