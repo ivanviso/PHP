@@ -1,0 +1,23 @@
+.title {
+    width: 80%;
+    background-color: paleturquoise;
+    text-align: center;
+}
+.boton {
+    margin-left: 20%;
+    padding: 1em 2em;
+
+}
+.boton,button {
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: run-in;
+    font-size: 16px;
+  }
+body {
+    background-image: url(https://wallpaperaccess.com/download/books-laptop-124383);
+}
