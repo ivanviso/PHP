@@ -54,16 +54,13 @@ CREATE TABLE `libro_venda` (
   `vendido_en` datetime
 );
 
+
+/*
 ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`ISBN`) REFERENCES `libro_aluguer` (`ISBN`);
-
 ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`prezo_aluguer`) REFERENCES `libro_aluguer` (`prezo_aluguer`);
-
 ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
-
 ALTER TABLE `libro_devolto` ADD FOREIGN KEY (`id_aluguer`) REFERENCES `libro_alugado` (`id_aluguer`);
-
 ALTER TABLE `libro_devolto` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
-
 ALTER TABLE `libro_venda` ADD FOREIGN KEY (`ISBN`) REFERENCES `libro_aluguer` (`ISBN`);
-
 ALTER TABLE `libro_venda` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
+*/ 
