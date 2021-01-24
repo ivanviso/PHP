@@ -2,12 +2,18 @@
     width: 80%;
     background-color: paleturquoise;
     text-align: center;
+    color: black;
 }
 .boton {
     margin-left: 20%;
     padding: 1em 2em;
 
 }
+
+.formulario {
+    margin-left: 30%;
+}
+
 .boton,button {
     background-color: cornflowerblue;
     border: none;
@@ -18,6 +24,10 @@
     display: run-in;
     font-size: 16px;
   }
+td {
+    background-color: cornflowerblue;
+    color: white;
+}
 body {
-    background-image: url(https://wallpaperaccess.com/download/books-laptop-124383);
+    background-image: url(/img/background.jpg);
 }
