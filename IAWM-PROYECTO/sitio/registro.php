@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="php/userpost.php" method="GET">
+    <form action="php/userpost.php" method="POST">
         <table class="formulario">
             <thead>
                 <tr>
@@ -66,6 +66,10 @@
             </tr>
         </table>
     </form>
+   
+<h3 class=error> <?php
+    echo "hola";
+    ?></h3> 
 </body>
 
 </html>
