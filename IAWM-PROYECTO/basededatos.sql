@@ -1,3 +1,5 @@
+CREATE database viviroutrasvidas;
+use viviroutrasvidas;
 CREATE TABLE `usuario` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `usuario` varchar(24) UNIQUE,
