@@ -67,9 +67,12 @@
         </table>
     </form>
    
-<h3 class=error> <?php
-    echo "hola";
-    ?></h3> 
+<h1 class=error> <?php
+    $error=false;
+    if ($error) {
+        echo "ERROR";
+    }
+    ?></h1> 
 </body>
 
 </html>
