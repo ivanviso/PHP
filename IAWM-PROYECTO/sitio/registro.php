@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="php/userpost.php" method="POST">
+    <form action="registro.php" method="POST">
         <table class="formulario">
             <thead>
                 <tr>
@@ -70,9 +70,21 @@
 <h1 class=error> <?php
     $error=false;
     if ($error) {
-        echo "ERROR";
+        echo $error_text;
     }
     ?></h1> 
+
+<?php
+$con = mysqli_connect("localhost","phpuser","abcABC123","viviroutrasvidas");
+$username=$_REQUEST['username'];
+$pass=$_REQUEST['pass'];
+$nombre=$_REQUEST['nombre'];
+$addr=$_REQUEST['addr'];
+$dni=$_REQUEST['dni'];
+echo $username,$pass,$addr,$nombre,$dni;
+?>
 </body>
+
+
 
 </html>
