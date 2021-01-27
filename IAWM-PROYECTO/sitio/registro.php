@@ -59,6 +59,14 @@
                 </td>
             </tr>
             <tr>
+                <td>
+                    <label for="fname">Telefono</label>
+                </td>
+                <td>
+                    <input type="number" id="tlf" name="tlf">
+                </td>
+            </tr>
+            <tr>
                 <td></td>
                 <td>
                 <input type="submit" name="submit">
@@ -75,15 +83,31 @@
     ?></h1> 
 
 <?php
-
-include php/mysqlcon.php;
+include 'php/mysqlcon.php'; //nos conectamos a la base de datos
 $username=$_REQUEST['username'];
 $pass=$_REQUEST['pass'];
+$hashpass=password_hash($pass, PASSWORD_DEFAULT); // hasheamos la contrasena
 $nombre=$_REQUEST['nombre'];
 $addr=$_REQUEST['addr'];
 $dni=$_REQUEST['dni'];
-echo $username,$pass,$addr,$nombre,$dni;
+$tlf=$_REQUEST['tlf'];
+$query_prueba="SELECT count(*) from usuario where usuario='$username'";  // comprobamos que no exiten otros usuarios con el mismo nombre.
+$query="INSERT INTO usuario(usuario,contrasinal,direccion,telefono,nifdni,fecha_registro) VALUES ('$username','$hashpass','$addr',$tlf,'$dni',NOW())"; // necesitamos insertar en dos tablas.
+$query2="INSERT INTO novo_rexistro(usuario,contrasinal,direccion,telefono,nifdni) VALUES ('$username','$hashpass','$addr',$tlf,'$dni')";
+include 'php/tests.php'; // realizamos las comprobaciones de las variables en este fichero. 
 
+
+if (empty($errores)) { //insertamos en la base de datos, si no hay ningun error. 
+        mysqli_query($conn,$query);
+        mysqli_query($conn,$query2); 
+}
+
+
+echo "<h3 class=error> $errores</h3>";
+
+
+mysqli_commit($conn);
+mysqli_close($conn);
 ?>
 
 
