@@ -8,6 +8,23 @@
 </head>
 
 <body>
+<table>
+            <tr>
+                <td class=title>
+                    <h1>Bienvenido a nuestra pagina</h1>
+                </td>
+                <td class=boton>
+                    <button onclick="location.href='/registro.php'">
+                        Registro
+                    </button>
+                </td>
+                <td class=boton>
+                    <button onclick="location.href='/login.php'">
+                        Iniciar Sesion 
+                    </button>
+                </td>
+            </tr>
+        </table>
     <form action="registro.php" method="POST">
         <table class="formulario">
             <thead>
