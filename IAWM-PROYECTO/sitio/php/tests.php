@@ -21,7 +21,7 @@ $errores="";
     if (empty($addr)) {
         $errores.="<br>La direccion esta vacia";
     }
-    // POR HACER : comprobar el CRC del DNI si me sobra tiempo.
+    // POR HACER : comprobar el CRC del DNI si me sobra tiempo. https://www.jose-aguilar.com/blog/validar-dni-php/
 
     if (!strlen($dni) == 9) {
         if (empty($dni)) {
@@ -40,9 +40,8 @@ $errores="";
             $errores.="<br> El telefono es incorrecto";
         }
     }
-     if (mysqli_query($conn,$query_prueba) == 0) { 
+     if (mysqli_num_rows(mysqli_query($conn,$query_prueba)) != 0) { 
         $errores.="<br>El nombre de usuario ya existe";
         } 
 }
-
 ?>

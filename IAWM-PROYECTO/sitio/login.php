@@ -60,4 +60,20 @@
         </table>
     </form>
     </body>
+    <?php
+    
+    if ($_SERVER['REQUEST_METHOD']=='POST') { // para que solo se ejecute despues de enviar el formulario. 
+        $username=$_REQUEST['username'];
+        $contrasinal=$_REQUEST['pass'];
+        include 'php/auth.php';
+        echo $contrasinal,$hash['contrasinal'],$login;
+        if ($login) {
+            // falta redirección. Codigo para probar. 
+            echo "login exitoso";
+        } else {
+            echo "<h3 class=error>Contraseña incorrecta</h3>";
+
+        }
+}
+    ?>
 </html>
