@@ -40,8 +40,8 @@ $errores="";
             $errores.="<br> El telefono es incorrecto";
         }
     }
-     if (mysqli_num_rows(mysqli_query($conn,$query_prueba)) != 0) { 
-        $errores.="<br>El nombre de usuario ya existe";
+    if (mysqli_num_rows(mysqli_query($conn,$query_prueba))) { 
+        $errores.="<br>El nombre de usuario ya existe";  
         } 
 }
 ?>
