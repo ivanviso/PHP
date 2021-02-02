@@ -11,7 +11,7 @@
 <table>
             <tr>
                 <td class=title>
-                    <h1>Bienvenido a nuestra pagina</h1>
+                <h1 onclick="location.href='/'">Bienvenido a nuestra pagina</h1>
                 </td>
                 <td class=boton>
                     <button onclick="location.href='/registro.php'">
