@@ -61,18 +61,23 @@
     </form>
     </body>
     <?php
-    
     if ($_SERVER['REQUEST_METHOD']=='POST') { // para que solo se ejecute despues de enviar el formulario. 
         $username=$_REQUEST['username'];
         $contrasinal=$_REQUEST['pass'];
         include 'php/auth.php';
-        if ($login) {
-            // falta redirección. Codigo para probar. 
-            echo "login exitoso";
+        include 'php/redirect.php';
+        echo $login;
+        if ($login==true) {
+            if ($admin==true) {
+                js_redirect("/panel_admin.php");
+            } else {
+                js_redirect("/panel_usuario.php");
+            }
         } else {
             echo "<h3 class=error>Contraseña incorrecta</h3>";
 
         }
 }
     ?>
+
 </html>
