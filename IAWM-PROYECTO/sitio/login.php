@@ -66,7 +66,6 @@
         $username=$_REQUEST['username'];
         $contrasinal=$_REQUEST['pass'];
         include 'php/auth.php';
-        echo $contrasinal,$hash['contrasinal'],$login;
         if ($login) {
             // falta redirección. Codigo para probar. 
             echo "login exitoso";

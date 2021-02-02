@@ -108,7 +108,6 @@ $nombre=$_REQUEST['nombre'];
 $addr=$_REQUEST['addr'];
 $dni=$_REQUEST['dni'];
 $tlf=$_REQUEST['tlf'];
-include 'php/tests.php'; // realizamos las comprobaciones de las variables en este fichero. 
 include 'php/insert.php';
 
 
