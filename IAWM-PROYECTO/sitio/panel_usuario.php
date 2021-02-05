@@ -32,53 +32,26 @@
     </div>
 
     <div id="main-content">
-      <article class="main-article">
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-      </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
-        <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan venenatis libero, consectetur euismod urna scelerisque et. Curabitur quis turpis sed neque convallis convallis sit amet vitae nisi. Praesent tincidunt sapien id urna lobortis, eu mattis felis elementum. Mauris pretium lectus orci, nec volutpat nulla vestibulum a. Phasellus vulputate, odio nec pellentesque interdum, odio magna viverra lectus, in facilisis risus sapien sed mauris. Ut cursus magna vitae dolor aliquet interdum. Curabitur aliquet velit ac risus convallis, in semper nunc hendrerit. Praesent eu mi sodales, molestie tortor ac, egestas turpis. Etiam et mi neque. Nunc non velit at nulla faucibus imperdiet vel quis ipsum.
-        </p>
+      <article class="main-article"><?php
+include 'php/mysqlcon.php';
+$sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
+$result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
+echo "<br>";
+echo "<table border='1' style='margin-top: 15%';>";
+while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+    echo "<tr>";
+    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
+        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
+
+    }
+    echo "<td> <img src='https://picsum.photos/200/300'> </td>" ;
+    echo "</tr>";
+}
+echo "</table>";
+?>
       </article>
     </div>
 
     <script src="./js/script.js"></script>
   </body>
-
 </html>
