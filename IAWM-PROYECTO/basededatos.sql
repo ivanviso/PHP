@@ -8,7 +8,7 @@ CREATE TABLE `usuario` (
   `direccion` varchar(90),
   `telefono` int,
   `nifdni` varchar(9),
-  'admin' boolean,
+  `admin` BOOL,
   `fecha_registro` datetime
 );
 
