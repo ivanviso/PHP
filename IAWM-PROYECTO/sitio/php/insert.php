@@ -1,5 +1,5 @@
 <?php
-$query_prueba="SELECT count(*) from usuario as cuenta where usuario='$username'";  // comprobamos que no exiten otros usuarios con el mismo nombre.
+$query_prueba="SELECT count(usuario) from usuario as cuenta where usuario='$username'";  // comprobamos que no exiten otros usuarios con el mismo nombre.
 $query="INSERT INTO usuario(usuario,contrasinal,direccion,telefono,nifdni,fecha_registro) VALUES ('$username','$hashpass','$addr',$tlf,'$dni',NOW())"; // necesitamos insertar en dos tablas.
 $query2="INSERT INTO novo_rexistro(usuario,contrasinal,direccion,telefono,nifdni) VALUES ('$username','$hashpass','$addr',$tlf,'$dni')";
 

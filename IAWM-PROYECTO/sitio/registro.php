@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.csss">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
@@ -100,7 +100,8 @@
     ?></h1> 
 
 <?php
-include 'php/mysqlcon.php'; //nos conectamos a la base de datos
+$errores="";
+if ($_SERVER['REQUEST_METHOD']=='POST') {
 $username=$_REQUEST['username'];
 $pass=$_REQUEST['pass'];
 $hashpass=password_hash($pass, PASSWORD_DEFAULT); // hasheamos la contrasena
@@ -108,8 +109,9 @@ $nombre=$_REQUEST['nombre'];
 $addr=$_REQUEST['addr'];
 $dni=$_REQUEST['dni'];
 $tlf=$_REQUEST['tlf'];
+include 'php/mysqlcon.php'; //nos conectamos a la base de datos
 include 'php/insert.php';
-
+}
 
 echo "<h3 class=error> $errores</h3>";
 

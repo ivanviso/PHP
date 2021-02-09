@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING); 
 if ($_SERVER['REQUEST_METHOD']=='POST') {
 unset($errores);
 $errores="";
@@ -40,7 +41,8 @@ $errores="";
             $errores.="<br> El telefono es incorrecto";
         }
     }
-    if (mysqli_num_rows(mysqli_query($conn,$query_prueba))) { 
+
+    if (mysqli_fetch_assoc(mysqli_query($conn,$query_prueba))['count(usuario)'] > 0 ) { //cuenta todas las filas con el mismo usuario
         $errores.="<br>El nombre de usuario ya existe";  
         } 
 }
