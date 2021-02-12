@@ -69,9 +69,14 @@
         echo $login;
         $admin=false;
         if ($login==true) {
+            session_start();
+            $_SESSION['login']=true;
+            $_SESSION['test']="Miamsdadadadad";
             if ($admin==true) {
+                $_SESSION['admin']=true;
                 js_redirect("/panel_admin.php");
             } else {
+                $_SESSION['admin']=false;
                 js_redirect("/panel_usuario.php");
             }
         } else {

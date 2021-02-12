@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <?php include 'php/session_prot.php';?>
     <meta charset="utf-8">
-    <title>FlexNav</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/flexnav.css">
     <link rel="stylesheet" type="text/css" href="./css/demo.css">
@@ -37,6 +38,7 @@
 include 'php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
+//echo "<h1>$_SESSION['test']</h1>";
 echo "<br>";
 echo "<table class='catalogo' border='1' style='margin-top: 15%' ;>",
   "<thead>
