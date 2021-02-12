@@ -1,56 +1,64 @@
-  
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>FlexNav</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/flexnav.css">
     <link rel="stylesheet" type="text/css" href="./css/demo.css">
     <link rel="stylesheet" href="css/login.css">
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="nav-background">
-      <div id="nav-container">
-        <header id="nav-header">
-          <h1><a href="#" id="nav-logo">Vivir Outras Vidas</a></h1>
-          <div id="nav-menu-button">MENU</div>
-        </header>
-        <nav>
-          <ul class="nav-ul hide-ul">
-            <li><a class="nav-link active-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">Alquiler</a></li>
-            <li><a class="nav-link" href="#">Venta</a></li>
-            <li><a class="nav-link" href="#">Datos</a></li>
-            <li><a class="nav-link" href="#">Devolucion</a></li>
-            <li><a class="nav-link" href="#">Catalogo</a></li>
+        <div id="nav-container">
+            <header id="nav-header">
+                <h1><a href="#" id="nav-logo">Vivir Outras Vidas</a></h1>
+                <div id="nav-menu-button">MENU</div>
+            </header>
+            <nav>
+                <ul class="nav-ul hide-ul">
+                    <li><a class="nav-link active-link" href="#">Home</a></li>
+                    <li><a class="nav-link" href="#">Alquiler</a></li>
+                    <li><a class="nav-link" href="#">Venta</a></li>
+                    <li><a class="nav-link" href="#">Datos</a></li>
+                    <li><a class="nav-link" href="#">Devolucion</a></li>
+                    <li><a class="nav-link" href="#">Catalogo</a></li>
 
-          </ul>
-        </nav>
-      </div>
+                </ul>
+            </nav>
+        </div>
     </div>
 
     <div id="main-content">
-      <article class="main-article"><?php
+        <article class="main-article">
+            <?php
 include 'php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
-echo "<table class='catalogo' border='1' style='margin-top: 15%';>",
-"<thead><td>ISBN</td><td>Titulo</td><td>Descripcion</td><td>Prezo</td><td>Prezo aluguer</td><td>Portada</td></thead>";
-while ($row = mysqli_fetch_assoc($result)) { 
+echo "<table class='catalogo' border='1' style='margin-top: 15%' ;>",
+  "<thead>
+    <td>ISBN</td>
+    <td>Titulo</td>
+    <td>Descripcion</td>
+    <td>Prezo</td>
+    <td>Prezo aluguer</td>
+    <td>Portada</td>
+  </thead>";
+while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
-    echo "<td>",$row['ISBN'],"</td>";
-    echo "<td>",$row['titulo'],"</td>";
+    echo "<td>", $row['ISBN'], "</td>";
+    echo "<td>", $row['titulo'], "</td>";
     //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
-    echo "<td>",$row['descripcion'],"</td>";
-    echo "<td>",$row['prezo'],"€","</td>";
-    echo "<td>",$row['prezo_aluguer'],"€","</td>";
-    echo "<td>","<img src=",$row['foto'],">","</td>";
-    }
+    echo "<td>", $row['descripcion'], "</td>";
+    echo "<td>", $row['prezo'], "€", "</td>";
+    echo "<td>", $row['prezo_aluguer'], "€", "</td>";
+    echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+}
 //    echo "<td> <img src='https://picsum.photos/200/300'> </td>" ;
-    echo "</tr>";
+echo "</tr>";
 
 echo "</table>";
 
@@ -67,14 +75,13 @@ echo "</table>";
 | prezo_aluguer | int(11)       | YES  |     | NULL    |       |
 | foto          | varchar(1000) | YES  |     | NULL    |       |
 +---------------+---------------+------+-----+---------+-------+
-*/
+ */
 
 ?>
-      </article>
+        </article>
     </div>
 
     <script src="./js/script.js"></script>
-  </body>
+</body>
+
 </html>
-
-
