@@ -42,3 +42,13 @@ body {
     color: red;
     text-align: center;
 }
+thead tr td { 
+    color: black;
+    background-color: blanchedalmond;
+    font-size: 3em !important;
+}
+
+.catalogo tr td {
+    vertical-align: top;
+    font-size: 2em;
+}

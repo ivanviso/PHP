@@ -37,8 +37,8 @@ include 'php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
-echo "<table border='1' style='margin-top: 15%';>",
-"<tr><td>ISBN</td><td>Titulo</td><td>Descripcion</td><td>Prezo</td><td>Prezo aluguer</td><td>Portada</td></tr>";
+echo "<table class='catalogo' border='1' style='margin-top: 15%';>",
+"<thead><td>ISBN</td><td>Titulo</td><td>Descripcion</td><td>Prezo</td><td>Prezo aluguer</td><td>Portada</td></thead>";
 while ($row = mysqli_fetch_assoc($result)) { 
     echo "<tr>";
     echo "<td>",$row['ISBN'],"</td>";
