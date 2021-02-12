@@ -67,6 +67,7 @@
         include 'php/auth.php';
         include 'php/redirect.php';
         echo $login;
+        $admin=false;
         if ($login==true) {
             if ($admin==true) {
                 js_redirect("/panel_admin.php");

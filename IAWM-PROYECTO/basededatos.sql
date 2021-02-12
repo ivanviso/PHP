@@ -23,7 +23,7 @@ CREATE TABLE `novo_rexistro` (
 
 CREATE TABLE `libro_aluguer` (
   `ISBN` varchar(18) PRIMARY KEY,
-  `titulo` varchar(50),
+  `titulo` varchar(60),
   `cantidade` int,
   `descripcion` varchar(100),
   `editorial` varchar(24),

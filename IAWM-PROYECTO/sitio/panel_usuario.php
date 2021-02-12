@@ -37,17 +37,38 @@ include 'php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 echo "<br>";
-echo "<table border='1' style='margin-top: 15%';>";
-while ($row = mysqli_fetch_assoc($result)) { // Important line !!! Check summary get row on array ..
+echo "<table border='1' style='margin-top: 15%';>",
+"<tr><td>ISBN</td><td>Titulo</td><td>Descripcion</td><td>Prezo</td><td>Prezo aluguer</td><td>Portada</td></tr>";
+while ($row = mysqli_fetch_assoc($result)) { 
     echo "<tr>";
-    foreach ($row as $field => $value) { // I you want you can right this line like this: foreach($row as $value) {
-        echo "<td>" . $value . "</td>"; // I just did not use "htmlspecialchars()" function. 
-
+    echo "<td>",$row['ISBN'],"</td>";
+    echo "<td>",$row['titulo'],"</td>";
+    //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
+    echo "<td>",$row['descripcion'],"</td>";
+    echo "<td>",$row['prezo'],"€","</td>";
+    echo "<td>",$row['prezo_aluguer'],"€","</td>";
+    echo "<td>","<img src=",$row['foto'],">","</td>";
     }
-    echo "<td> <img src='https://picsum.photos/200/300'> </td>" ;
+//    echo "<td> <img src='https://picsum.photos/200/300'> </td>" ;
     echo "</tr>";
-}
+
 echo "</table>";
+
+/*
++---------------+---------------+------+-----+---------+-------+
+| Field         | Type          | Null | Key | Default | Extra |
++---------------+---------------+------+-----+---------+-------+
+| ISBN          | varchar(18)   | NO   | PRI | NULL    |       |
+| titulo        | varchar(60)   | YES  |     | NULL    |       |
+| cantidade     | int(11)       | YES  |     | NULL    |       |
+| descripcion   | varchar(100)  | YES  |     | NULL    |       |
+| editorial     | varchar(24)   | YES  |     | NULL    |       |
+| prezo         | int(11)       | YES  |     | NULL    |       |
+| prezo_aluguer | int(11)       | YES  |     | NULL    |       |
+| foto          | varchar(1000) | YES  |     | NULL    |       |
++---------------+---------------+------+-----+---------+-------+
+*/
+
 ?>
       </article>
     </div>
@@ -55,3 +76,5 @@ echo "</table>";
     <script src="./js/script.js"></script>
   </body>
 </html>
+
+
