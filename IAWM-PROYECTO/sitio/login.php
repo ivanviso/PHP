@@ -70,6 +70,7 @@
         $admin=false;
         if ($login==true) {
             session_start();
+            $_SESSION['usuario']=$username;
             $_SESSION['login']=true;
             $_SESSION['test']="Miamsdadadadad";
             if ($admin==true) {

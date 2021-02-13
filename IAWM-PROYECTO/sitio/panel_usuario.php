@@ -11,45 +11,24 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body>
-    <div id="nav-background">
-        <div id="nav-container">
-            <header id="nav-header">
-                <h1><a href="#" id="nav-logo">Vivir Outras Vidas</a></h1>
-                <div id="nav-menu-button">MENU</div>
-            </header>
-            <nav>
-                <ul class="nav-ul hide-ul">
-                    <li><a class="nav-link active-link" href="#">Home</a></li>
-                    <li><a class="nav-link" href="#">Alquiler</a></li>
-                    <li><a class="nav-link" href="#">Venta</a></li>
-                    <li><a class="nav-link" href="#">Datos</a></li>
-                    <li><a class="nav-link" href="#">Devolucion</a></li>
-                    <li><a class="nav-link" href="#">Catalogo</a></li>
 
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div id="main-content">
-        <article class="main-article">
             <?php
-include 'php/mysqlcon.php';
+include '/php/flexnav.php';
+include '/php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
-session_start();
-echo $_SESSION["test"];
+
 echo "<br>";
-echo "<table class='catalogo' border='1' style='margin-top: 15%' ;>",
-  "<thead>
+echo 
+    "<table class='catalogo' border='1' style='margin-top: 15%;'>",
+    "<thead>
     <td>ISBN</td>
     <td>Titulo</td>
     <td>Descripcion</td>
     <td>Prezo</td>
     <td>Prezo aluguer</td>
     <td>Portada</td>
-  </thead>";
+    </thead>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<td>", $row['ISBN'], "</td>";
@@ -60,7 +39,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>", $row['prezo_aluguer'], "€", "</td>";
     echo "<td>", "<img src=", $row['foto'], ">", "</td>";
 }
-//    echo "<td> <img src='https://picsum.photos/200/300'> </td>" ;
 echo "</tr>";
 
 echo "</table>";
