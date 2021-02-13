@@ -13,14 +13,14 @@
 
 
             <?php
-include '/php/flexnav.php';
-include '/php/mysqlcon.php';
+include 'php/flexnav.php';
+include 'php/mysqlcon.php';
 $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 
 echo "<br>";
 echo 
-    "<table class='catalogo' border='1' style='margin-top: 15%;'>",
+    "<table class='catalogo' border='1' style='margin-top: 15%; '>",
     "<thead>
     <td>ISBN</td>
     <td>Titulo</td>

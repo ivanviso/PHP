@@ -1,5 +1,6 @@
 <head>
 <link rel="stylesheet" href="/css/login.css">
+<?php include 'php/session_prot.php';?>
 </head>
 <?php
 include '../php/mysqlcon.php';
@@ -12,7 +13,7 @@ $row = mysqli_fetch_assoc($result);
     echo "<table style='margin-top: 15%; font-size: 2em;'>
 <thead>
   <tr>
-    <th colspan='3' style='background-color: white; font-size: 2.5em;'>DATOS DE USUARIO</th>
+    <th colspan='3' style='background-color: white; font-size: 2.5em; margin-left : 10% ;'>DATOS DE USUARIO</th>
   </tr>
 </thead>
 <tbody>
