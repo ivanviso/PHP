@@ -9,14 +9,14 @@ echo '
             <h1><a href="#" id="nav-logo">Vivir Outras Vidas</a></h1>
             <div id="nav-menu-button">MENU</div>
         </header>
-        <nav>
+        <nav>8
             <ul class="nav-ul hide-ul">
-                <li><a class="nav-link active-link" href="#">Home</a></li>
+                <li><a class="nav-link active-link" href="">Home</a></li>
                 <li><a class="nav-link" href="#">Alquiler</a></li>
                 <li><a class="nav-link" href="#">Venta</a></li>
                 <li><a class="nav-link" href="/usuario/perfil.php">Perfil</a></li>
                 <li><a class="nav-link" href="">Devolucion</a></li>
-                <li><a class="nav-link" href="#">Catalogo</a></li>
+                <li><a class="nav-link" href="/panel_usuario.php">Catalogo</a></li>
 
             </ul>
         </nav>
