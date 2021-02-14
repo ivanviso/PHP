@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-    <?php include 'php/session_prot.php';?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/flexnav.css">
@@ -11,7 +10,7 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 
-
+<?php include 'php/session_prot.php';?>
             <?php
 include 'php/flexnav.php';
 include 'php/mysqlcon.php';
@@ -20,7 +19,7 @@ $result = mysqli_query($conn, $sql); // First parameter is just return of "mysql
 
 echo "<br>";
 echo 
-    "<table class='catalogo' border='1' style='margin-top: 15%; '>",
+    "<table class='catalogo' border='1' style='margin-top: 15%;'>",
     "<thead>
     <td>ISBN</td>
     <td>Titulo</td>

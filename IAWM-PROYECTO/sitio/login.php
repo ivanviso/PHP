@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<?php include 'php/session_prot.php';?>
 <table>
             <tr>
                 <td class=title>
@@ -65,7 +66,6 @@
         $username=$_REQUEST['username'];
         $contrasinal=$_REQUEST['pass'];
         include 'php/auth.php';
-        include 'php/redirect.php';
         echo $login;
         $admin=false;
         if ($login==true) {
