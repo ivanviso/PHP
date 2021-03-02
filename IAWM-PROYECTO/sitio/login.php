@@ -8,7 +8,9 @@
 </head>
 
 <body>
-<?php include 'php/session_prot.php';?>
+<?php include 'php/redirect.php';
+?>
+
 <table>
             <tr>
                 <td class=title>
@@ -66,7 +68,6 @@
         $username=$_REQUEST['username'];
         $contrasinal=$_REQUEST['pass'];
         include 'php/auth.php';
-        echo $login;
         $admin=false;
         if ($login==true) {
             session_start();
@@ -75,10 +76,11 @@
             $_SESSION['test']="Miamsdadadadad";
             if ($admin==true) {
                 $_SESSION['admin']=true;
-                js_redirect("/panel_admin.php");
+                js_redirect("panel_admin.php");
             } else {
                 $_SESSION['admin']=false;
-                js_redirect("/panel_usuario.php");
+                js_redirect("panel_usuario.php");
+                echo $_SESSION['login'];
             }
         } else {
             echo "<h3 class=error>Contraseña incorrecta</h3>";
