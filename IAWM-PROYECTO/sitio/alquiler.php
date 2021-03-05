@@ -13,7 +13,7 @@
             <?php
 include 'php/flexnav.php';
 include 'php/mysqlcon.php';
-$sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
+$sql = "SELECT * FROM libro_aluguer WHERE cantidade > 0 ORDER BY RAND()";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 session_start();
 echo "<br>";

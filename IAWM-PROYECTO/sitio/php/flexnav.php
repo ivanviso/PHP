@@ -11,12 +11,12 @@ echo '
         </header>
         <nav>
             <ul class="nav-ul hide-ul">
-                <li><a class="nav-link active-link" href="">Home</a></li>
                 <li><a class="nav-link" href="/alquiler.php">Alquiler</a></li>
                 <li><a class="nav-link" href="/venta.php">Venta</a></li>
                 <li><a class="nav-link" href="/usuario/perfil.php">Perfil</a></li>
                 <li><a class="nav-link" href="">Devolucion</a></li>
                 <li><a class="nav-link" href="/panel_usuario.php">Catalogo</a></li>
+                <li><a class="nav-link" href="/carrito.php">Carrito</a></li>
 
             </ul>
         </nav>

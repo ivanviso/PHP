@@ -13,7 +13,7 @@
             <?php
 include 'php/flexnav.php';
 include 'php/mysqlcon.php';
-$sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
+$sql = "SELECT * FROM libro_aluguer WHERE cantidade > 0 ORDER BY RAND() ";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 session_start();
 echo "<br>";
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>", $row['prezo'], "€", "</td>";
     echo "<td>", "<img src=", $row['foto'], ">", "</td>";
     echo "<td>";
-    echo "<input type='checkbox' name='ISBNa[]' value=",$row['ISBN']," />", "</td>"; // ISBNa marca que la compra es un alquiler. Todos los checkboxes marcados se convierten en un array. 
+    echo "<input type='checkbox' name='ISBNc[]' value=",$row['ISBN']," />", "</td>"; // ISBNa marca que la compra es un alquiler. Todos los checkboxes marcados se convierten en un array. 
 
 }
 echo "</tr>";
