@@ -27,16 +27,17 @@ echo
     <td>Prezo</td>
     <td>Prezo aluguer</td>
     <td>Portada</td>
+    <td>Cantidade</td>
     </thead>";
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<td>", $row['ISBN'], "</td>";
     echo "<td>", $row['titulo'], "</td>";
-    //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
     echo "<td>", $row['descripcion'], "</td>";
     echo "<td>", $row['prezo'], "€", "</td>";
     echo "<td>", $row['prezo_aluguer'], "€", "</td>";
     echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+    echo "<td>",$row['cantidade'],"</td>";
 }
 echo "</tr>";
 

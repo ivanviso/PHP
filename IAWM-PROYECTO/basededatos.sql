@@ -44,8 +44,6 @@ CREATE TABLE `libro_devolto` (
   `id_devolucion` int PRIMARY KEY AUTO_INCREMENT,
   `id_aluguer` int,
   `usuario` varchar(24),
-  `titulo` varchar(50),
-  `prezo` int,
   `devolto_en` datetime
 );
 
@@ -53,7 +51,6 @@ CREATE TABLE `libro_venda` (
   `id_venta` int PRIMARY KEY AUTO_INCREMENT,
   `ISBN` varchar(18),
   `usuario` varchar(24),
-  `prezo` int,
   `vendido_en` datetime
 );
 
