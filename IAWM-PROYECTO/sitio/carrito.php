@@ -11,6 +11,7 @@
 <?PHP 
 
 session_start();
+include 'php/session_prot.php';
 
 if(isset($_POST['ISBNa'])) {
     $ISBN_ALQUILER=$_POST['ISBNa'];
@@ -27,6 +28,7 @@ if(isset($_POST['ISBNc'])) {
 
 include 'php/mysqlcon.php';
 include 'php/flexnav.php';
+
  // First parameter is just return of "mysqli_connect()" function
  echo 
     "<table class='catalogo' border='1' style='margin-top: 15%;'>",
@@ -35,9 +37,12 @@ include 'php/flexnav.php';
     <td>Descripcion</td>
     <td>Prezo</td>
     <td>Portada</td>
-    <td>Comprar</td>
-    <form action="<?php unset($_SESSION["carrito_alquiler"]); unset($_SESSION["carrito_compra"]) ?>" method="get">
-    <td rowspan=2>Borrar</td>
+    <form action="php/comprar.php" method="get">
+    <td style="padding-right: 1em" ><button class="boton"; type="submit" value="Borrar">Comprar</td>
+    </form>
+    <form action="php/sessionreset.php" method="get">
+    <td style="padding-right: 1em"><button class="boton" type="submit" value="Borrar">Borrar</td>
+    </form>
     </thead>';
 foreach ($_SESSION['carrito_alquiler'] as $ISBN) {
     $result = mysqli_query($conn, "SELECT * FROM libro_aluguer where ISBN=$ISBN");
@@ -46,7 +51,7 @@ foreach ($_SESSION['carrito_alquiler'] as $ISBN) {
         echo "<td>", $row['titulo'], "</td>";
         //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
         echo "<td>", $row['descripcion'], "</td>";
-        echo "<td>", $row['prezo_aluguer'], "€", "</td>";
+        echo "<td>", $row['prezo_aluguer'], "€ Alquiler", "</td>";
         echo "<td>", "<img src=", $row['foto'], ">", "</td>";
         $total[]=$row;
     }
@@ -59,7 +64,7 @@ foreach ($_SESSION['carrito_compra'] as $ISBN) {
         echo "<td>", $row['titulo'], "</td>";
         //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
         echo "<td>", $row['descripcion'], "</td>";
-        echo "<td>", $row['prezo'], "€ Alquiler", "</td>";
+        echo "<td>", $row['prezo'], "€", "</td>";
         echo "<td>", "<img src=", $row['foto'], ">", "</td>";
         $total[]=$row;
     }
