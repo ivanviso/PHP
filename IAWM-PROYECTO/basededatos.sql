@@ -13,7 +13,7 @@ CREATE TABLE `usuario` (
 );
 
 CREATE TABLE `novo_rexistro` (
-  `usuario` varchar(24),
+  `usuario` varchar(24) UNIQUE,
   `contrasinal` char(60),
   `nome` varchar(60),
   `direccion` varchar(90),

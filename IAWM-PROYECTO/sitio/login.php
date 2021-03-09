@@ -67,16 +67,15 @@
     if ($_SERVER['REQUEST_METHOD']=='POST') { // para que solo se ejecute despues de enviar el formulario. 
         $username=$_REQUEST['username'];
         $contrasinal=$_REQUEST['pass'];
-        include 'php/auth.php';
         $admin=false;
+        include 'php/auth.php';
         if ($login==true) {
             session_start();
             $_SESSION['usuario']=$username;
             $_SESSION['login']=true;
-            $_SESSION['test']="Miamsdadadadad";
             if ($admin==true) {
                 $_SESSION['admin']=true;
-                js_redirect("panel_admin.php");
+                js_redirect("/admin/panel_admin.php");
             } else {
                 $_SESSION['admin']=false;
                 js_redirect("panel_usuario.php");

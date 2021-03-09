@@ -1,9 +1,9 @@
 <?php
-
-$userselect="SELECT contrasinal from usuario where usuario='$username'";
+session_start();
+$userselect="SELECT contrasinal,admin from usuario where usuario='$username'";
 include 'mysqlcon.php';
 $resultado=mysqli_query($conn,$userselect);
-$hash=mysqli_fetch_array($resultado);
-$login=password_verify($contrasinal,$hash['contrasinal']);
-
+$user=mysqli_fetch_array($resultado);
+$login=password_verify($contrasinal,$user['contrasinal']);
+$admin=$user['admin'];
 ?>

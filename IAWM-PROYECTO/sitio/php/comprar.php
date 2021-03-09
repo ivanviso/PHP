@@ -27,7 +27,8 @@ foreach ($_SESSION['carrito_compra'] as $ISBN) {
     }
 }
 mysqli_commit($conn);
-unset($_SESSION['carrito_alquiler']); unset($_SESSION['carrito_compra']); 
+unset($_SESSION['carrito_alquiler']); 
+unset($_SESSION['carrito_compra']); 
 include 'redirect.php';
 js_redirect('../devolver.php');
 

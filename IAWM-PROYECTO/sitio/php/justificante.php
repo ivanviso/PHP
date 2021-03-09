@@ -1,19 +1,18 @@
 <?php
 include 'mysqlcon.php';
+require '../pdf/fpdf.php';
     session_start();
-    
     $usuario=$_SESSION['usuario'];
-    
-    $fichero='justificante-'.$usuario.'.txt';
+    $fichero='justificante-'.$usuario.'.pdf';
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename='.basename($fichero));
     header('Expires: 0');
     header('Cache-Control: must-revalidate');
     header('Pragma: public');
     //header('Content-Length: ' . strlen($fichero));
-    $justificante="JUSTIFICANTE\t$usuario\n----------------------------------------------------------------------------------------------------\n";
+    $justificante="JUSTIFICANTE\t$usuario\n--------------------------------------------------------------------------------\n";
     $justificante.="LIBROS ALUGADOS\n";
-    $justificante.=str_pad("libro",57)."\tprecio\talugado en\n";
+    $justificante.=str_pad("libro",57)."\t\tprecio\talugado en\n";
     $result = mysqli_query($conn, "select libro_aluguer.ISBN,alugado_en,usuario,titulo,libro_aluguer.prezo_aluguer FROM libro_aluguer JOIN libro_alugado ON libro_aluguer.ISBN = libro_alugado.ISBN where usuario='$usuario'");
     while ($row = mysqli_fetch_assoc($result)) {
         $titulo=$row['titulo'];
@@ -24,7 +23,7 @@ include 'mysqlcon.php';
         $ISBN=$row['ISBN'];
         $justificante.="$ISBN\t$titulo    \t$precio €\t$fecha\n";
     }
-    $justificante.="-------------------------------------------------------------------------------------------------------------------------------------------\n";
+    $justificante.="-------------------------------------------------------------------------------------\n";
     $justificante.="LIBROS DEVOLTOS\n";
     $justificante.=str_pad("libro",57)."\tprecio\tdevolto en\n";
     $result = mysqli_query($conn, "select libro_aluguer.ISBN,devolto_en,usuario,titulo,libro_devolto.prezo_aluguer FROM libro_aluguer JOIN libro_devolto ON libro_aluguer.ISBN = libro_devolto.ISBN where usuario='$usuario'");
@@ -37,7 +36,7 @@ include 'mysqlcon.php';
         $ISBN=$row['ISBN'];
         $justificante.="$ISBN\t$titulo    \t$precio €\t$fecha\n";
     }
-    $justificante.="-------------------------------------------------------------------------------------------------------------------------------------------\n";
+    $justificante.="-------------------------------------------------------------------------------------\n";
     $justificante.="LIBROS COMPRADOS\n"; 
     $justificante.=str_pad("libro",57)."\tprecio\tcomprado en\n";
     $result = mysqli_query($conn, "select libro_aluguer.ISBN,vendido_en,usuario,titulo,libro_aluguer.prezo FROM libro_aluguer JOIN libro_venda ON libro_aluguer.ISBN = libro_venda.ISBN where usuario='$usuario'");
@@ -50,6 +49,9 @@ include 'mysqlcon.php';
         $ISBN=$row['ISBN'];
         $justificante .="$ISBN\t$titulo    \t$precio €\t$fecha\n";
     }
-    echo $justificante;
-    exit;
+$pdf = new FPDF('P','mm',array(220,12000));$pdf->AddPage();
+$pdf->SetFont('Courier','',11);
+$pdf->Write(12,iconv('UTF-8', 'windows-1252', $justificante));
+$pdf->Output();
+exit;
 ?>
