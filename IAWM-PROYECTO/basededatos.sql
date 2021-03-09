@@ -50,6 +50,7 @@ CREATE TABLE `libro_devolto` (
 CREATE TABLE `libro_venda` (
   `id_venta` int PRIMARY KEY AUTO_INCREMENT,
   `ISBN` varchar(18),
+  `prezo` int,
   `usuario` varchar(24),
   `vendido_en` datetime
 );

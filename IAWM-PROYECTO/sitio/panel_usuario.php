@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $sql); // First parameter is just return of "mysql
 
 echo "<br>";
 echo 
-    "<table class='catalogo' border='1' style='margin-top: 15%;'>",
+    "<table class='catalogo' border='1' style='margin-top: 15%; margin-left: -15%;'>",
     "<thead>
     <td>ISBN</td>
     <td>Titulo</td>

@@ -18,6 +18,7 @@ echo '
                 <li><a class="nav-link" href="/panel_usuario.php">Catalogo</a></li>
                 <li><a class="nav-link" href="/carrito.php">Carrito</a></li>
                 <li><a class="nav-link" href="/php/justificante.php">Justificante</a></li>
+                <li><a class="nav-link">',$_SESSION['usuario'],'</a></li>
 
 
             </ul>

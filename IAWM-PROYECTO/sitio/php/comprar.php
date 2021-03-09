@@ -19,6 +19,7 @@ foreach ($_SESSION['carrito_compra'] as $ISBN) {
     while ($row = mysqli_fetch_assoc($result)) {
       $sql="insert into libro_venda(ISBN,prezo,vendido_en,usuario) select ISBN,prezo,NOW(),usuario from libro_aluguer,usuario where usuario.usuario='".$_SESSION['usuario']."' AND ISBN=$ISBN";
       $sql2="update libro_aluguer set cantidade = cantidade - 1 where ISBN=$ISBN";
+
       echo $sql,"\n",$sql2;
       mysqli_query($conn,$sql);
       mysqli_query($conn,$sql2);
