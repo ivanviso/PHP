@@ -10,7 +10,7 @@
 </head>
 
 <?php include 'php/session_prot.php';?>
-            <?php
+<?php
 include 'php/flexnav.php';
 include 'php/mysqlcon.php';
 
