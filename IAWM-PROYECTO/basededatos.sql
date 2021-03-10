@@ -29,7 +29,9 @@ CREATE TABLE `libro_aluguer` (
   `editorial` varchar(24),
   `prezo` int,
   `prezo_aluguer` int,
-  `foto` varchar(1000)
+  `foto` varchar(1000),
+  `venda` boolean DEFAULT TRUE,
+  `aluguer` boolean DEFAULT TRUE
 );
 
 CREATE TABLE `libro_alugado` (

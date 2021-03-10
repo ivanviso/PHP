@@ -44,27 +44,31 @@ echo
     <td style="padding-right: 1em"><button class="boton" type="submit" value="Borrar">Borrar</td>
     </form>
     </thead>';
-foreach ($_SESSION['carrito_alquiler'] as $ISBN) {
-    $result = mysqli_query($conn, "SELECT * FROM libro_aluguer where ISBN=$ISBN");
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        echo "<td>", $row['titulo'], "</td>";
-        //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
-        echo "<td>", $row['descripcion'], "</td>";
-        echo "<td>", $row['prezo_aluguer'], "€ Alquiler", "</td>";
-        echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+if (isset($_SESSION['carrito_alquiler'])) {
+    foreach ($_SESSION['carrito_alquiler'] as $ISBN) {
+        $result = mysqli_query($conn, "SELECT * FROM libro_aluguer where ISBN=$ISBN");
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>", $row['titulo'], "</td>";
+            //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
+            echo "<td>", $row['descripcion'], "</td>";
+            echo "<td>", $row['prezo_aluguer'], "€ Alquiler", "</td>";
+            echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+        }
     }
 }
-foreach ($_SESSION['carrito_compra'] as $ISBN) {
-    $result = mysqli_query($conn, "SELECT * FROM libro_aluguer where ISBN=$ISBN");
-    echo "<br>";
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr>";
-        echo "<td>", $row['titulo'], "</td>";
-        //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
-        echo "<td>", $row['descripcion'], "</td>";
-        echo "<td>", $row['prezo'], "€", "</td>";
-        echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+if (isset($_SESSION['carrito_compra'])) {
+    foreach ($_SESSION['carrito_compra'] as $ISBN) {
+        $result = mysqli_query($conn, "SELECT * FROM libro_aluguer where ISBN=$ISBN");
+        echo "<br>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>", $row['titulo'], "</td>";
+            //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
+            echo "<td>", $row['descripcion'], "</td>";
+            echo "<td>", $row['prezo'], "€", "</td>";
+            echo "<td>", "<img src=", $row['foto'], ">", "</td>";
+        }
     }
 }
 

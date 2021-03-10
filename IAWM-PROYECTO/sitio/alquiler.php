@@ -13,7 +13,7 @@
             <?php
 include 'php/flexnav.php';
 include 'php/mysqlcon.php';
-$sql = "SELECT * FROM libro_aluguer WHERE cantidade > 0 ORDER BY RAND()";
+$sql = "SELECT * FROM libro_aluguer WHERE cantidade > 0 AND aluguer=True ORDER BY RAND()";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 session_start();
 echo "<br>";
@@ -44,20 +44,7 @@ echo "</tr>";
 echo "</table>";
 echo "</form>"
 
-/*
-+---------------+---------------+------+-----+---------+-------+
-| Field         | Type          | Null | Key | Default | Extra |
-+---------------+---------------+------+-----+---------+-------+
-| ISBN          | varchar(18)   | NO   | PRI | NULL    |       |
-| titulo        | varchar(60)   | YES  |     | NULL    |       |
-| cantidade     | int(11)       | YES  |     | NULL    |       |
-| descripcion   | varchar(100)  | YES  |     | NULL    |       |
-| editorial     | varchar(24)   | YES  |     | NULL    |       |
-| prezo         | int(11)       | YES  |     | NULL    |       |
-| prezo_aluguer | int(11)       | YES  |     | NULL    |       |
-| foto          | varchar(1000) | YES  |     | NULL    |       |
-+---------------+---------------+------+-----+---------+-------+
- */
+
 
 ?>
         </article>
