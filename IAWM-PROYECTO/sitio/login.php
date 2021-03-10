@@ -23,7 +23,7 @@
                 </td>
                 <td class=boton>
                     <button onclick="location.href='/login.php'">
-                        Iniciar Sesion 
+                        Iniciar Sesion
                     </button>
                 </td>
             </tr>
@@ -64,28 +64,28 @@
     </form>
     </body>
     <?php
-    if ($_SERVER['REQUEST_METHOD']=='POST') { // para que solo se ejecute despues de enviar el formulario. 
-        $username=$_REQUEST['username'];
-        $contrasinal=$_REQUEST['pass'];
-        $admin=false;
-        include 'php/auth.php';
-        if ($login==true) {
-            session_start();
-            $_SESSION['usuario']=$username;
-            $_SESSION['login']=true;
-            if ($admin==true) {
-                $_SESSION['admin']=true;
-                js_redirect("/admin/panel_admin.php");
-            } else {
-                $_SESSION['admin']=false;
-                js_redirect("panel_usuario.php");
-                echo $_SESSION['login'];
-            }
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // para que solo se ejecute despues de enviar el formulario.
+    $username = $_REQUEST['username'];
+    $contrasinal = $_REQUEST['pass'];
+    $admin = false;
+    include 'php/auth.php';
+    if ($login == true) {
+        session_start();
+        $_SESSION['usuario'] = $username;
+        $_SESSION['login'] = true;
+        if ($admin == true) {
+            $_SESSION['admin'] = true;
+            js_redirect("/admin/panel_admin.php");
         } else {
-            echo "<h3 class=error>Contraseña incorrecta</h3>";
-
+            $_SESSION['admin'] = false;
+            js_redirect("panel_usuario.php");
+            echo $_SESSION['login'];
         }
+    } else {
+        echo "<h3 class=error>Contraseña incorrecta</h3>";
+
+    }
 }
-    ?>
+?>
 
 </html>

@@ -18,8 +18,8 @@ $sql = "SELECT * FROM libro_aluguer ORDER BY titulo";
 $result = mysqli_query($conn, $sql); // First parameter is just return of "mysqli_connect()" function
 
 echo "<br>";
-echo 
-    "<table class='catalogo' border='1' style='margin-top: 15%; margin-left: -15%;'>",
+echo
+"<table class='catalogo' border='1' style='margin-top: 15%; margin-left: -15%;'>",
     "<thead>
     <td>ISBN</td>
     <td>Titulo</td>
@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     echo "<td>", $row['prezo'], "€", "</td>";
     echo "<td>", $row['prezo_aluguer'], "€", "</td>";
     echo "<td>", "<img src=", $row['foto'], ">", "</td>";
-    echo "<td>",$row['cantidade'],"</td>";
+    echo "<td>", $row['cantidade'], "</td>";
 }
 echo "</tr>";
 
