@@ -8,30 +8,30 @@
     <link rel="stylesheet" type="text/css" href="./css/demo.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
-<?PHP 
+<?PHP
 
 session_start();
 include 'php/session_prot.php';
 
-if(isset($_POST['ISBNa'])) {
-    $ISBN_ALQUILER=$_POST['ISBNa'];
+if (isset($_POST['ISBNa'])) {
+    $ISBN_ALQUILER = $_POST['ISBNa'];
     foreach ($ISBN_ALQUILER as $key) {
-        $_SESSION['carrito_alquiler'][]=$key;
+        $_SESSION['carrito_alquiler'][] = $key;
     }
 }
-if(isset($_POST['ISBNc'])) {
-    $ISBN_COMPRA=$_POST['ISBNc'];
+if (isset($_POST['ISBNc'])) {
+    $ISBN_COMPRA = $_POST['ISBNc'];
     foreach ($ISBN_COMPRA as $key) {
-        $_SESSION['carrito_compra'][]=$key;
+        $_SESSION['carrito_compra'][] = $key;
     }
 }
 
 include 'php/mysqlcon.php';
 include 'php/flexnav.php';
 
- // First parameter is just return of "mysqli_connect()" function
- echo 
-    "<table class='catalogo' border='1' style='margin-top: 15%;'>",
+// First parameter is just return of "mysqli_connect()" function
+echo
+"<table class='catalogo' border='1' style='margin-top: 15%;'>",
     '<thead>
     <td>Titulo</td>
     <td>Descripcion</td>
@@ -53,7 +53,6 @@ foreach ($_SESSION['carrito_alquiler'] as $ISBN) {
         echo "<td>", $row['descripcion'], "</td>";
         echo "<td>", $row['prezo_aluguer'], "€ Alquiler", "</td>";
         echo "<td>", "<img src=", $row['foto'], ">", "</td>";
-        $total[]=$row;
     }
 }
 foreach ($_SESSION['carrito_compra'] as $ISBN) {
@@ -66,7 +65,6 @@ foreach ($_SESSION['carrito_compra'] as $ISBN) {
         echo "<td>", $row['descripcion'], "</td>";
         echo "<td>", $row['prezo'], "€", "</td>";
         echo "<td>", "<img src=", $row['foto'], ">", "</td>";
-        $total[]=$row;
     }
 }
 
