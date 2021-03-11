@@ -77,7 +77,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 700px;
+    max-width: 1000px;
 }
 
 .nav-ul>li {

@@ -19,11 +19,6 @@ echo "<table class='formulario' style='font-size: 2em;'>
 <form action='datos_editor.php' method='POST'>
 <tbody>
   <tr>
-    <td>Nombre de usuario / Correo electrónico</td>
-    <td style='padding-left: 1em'>", $row['usuario'], "</td>
-    <td style='padding-right: 2em'><input class=boton style='display: block;  font-size:1em' type='submit' name='usuario' value='Cambiar'></td>
-  </tr>
-  <tr>
     <td>Nome</td>
     <td style='padding-left: 1em'>", $row['nome'], "</td>
     <td style='padding-right: 2em'><input class=boton style='display: block;  font-size:1em' type='submit' name='nombre' value='Cambiar'></td>
