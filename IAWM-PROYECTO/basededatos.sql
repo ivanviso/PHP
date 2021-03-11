@@ -44,9 +44,11 @@ CREATE TABLE `libro_alugado` (
 
 CREATE TABLE `libro_devolto` (
   `id_devolucion` int PRIMARY KEY AUTO_INCREMENT,
+  `ISBN` varchar(18),
   `id_aluguer` int,
   `usuario` varchar(24),
-  `devolto_en` datetime
+  `devolto_en` datetime,
+  `confirmado` BOOL DEFAULT FALSE
 );
 
 CREATE TABLE `libro_venda` (
@@ -58,12 +60,11 @@ CREATE TABLE `libro_venda` (
 );
 
 
-/*
+
 ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`ISBN`) REFERENCES `libro_aluguer` (`ISBN`);
-ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`prezo_aluguer`) REFERENCES `libro_aluguer` (`prezo_aluguer`);
+ALTER TABLE `libro_devolto` ADD FOREIGN KEY (`ISBN`) REFERENCES `libro_aluguer` (`ISBN`);
 ALTER TABLE `libro_alugado` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
 ALTER TABLE `libro_devolto` ADD FOREIGN KEY (`id_aluguer`) REFERENCES `libro_alugado` (`id_aluguer`);
 ALTER TABLE `libro_devolto` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
 ALTER TABLE `libro_venda` ADD FOREIGN KEY (`ISBN`) REFERENCES `libro_aluguer` (`ISBN`);
 ALTER TABLE `libro_venda` ADD FOREIGN KEY (`usuario`) REFERENCES `usuario` (`usuario`);
-*/ 

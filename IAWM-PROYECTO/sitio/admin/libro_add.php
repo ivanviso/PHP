@@ -39,7 +39,7 @@ include 'flexnav_admin.php';
     </form>
 </table>
 <?php
-if (isset($_POST)) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ISBN = $_POST['ISBN'];
     $titulo = $_POST['titulo'];
     $editorial = $_POST['editorial'];

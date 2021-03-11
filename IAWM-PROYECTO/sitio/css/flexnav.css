@@ -38,7 +38,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
