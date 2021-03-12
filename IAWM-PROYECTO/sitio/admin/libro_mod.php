@@ -1,7 +1,12 @@
 <?php
-
+header("Expires: on, 01 Jan 1970 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 include 'session_prot_admin.php';
 include 'flexnav_admin.php';
+sleep(2);
 
 ?>
 
@@ -92,7 +97,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     mysqli_query($conn, "REPLACE INTO libro_aluguer (ISBN,titulo,cantidade,descripcion,editorial,prezo,prezo_aluguer,foto,venda,aluguer) values ($ISBN,'$titulo',$cantidade,'$descripcion','$editorial',$prezo,$prezo_aluguer,'$foto',$venda,$aluguer)");
-
     js_redirect('/admin/cargando.php');
 }
 

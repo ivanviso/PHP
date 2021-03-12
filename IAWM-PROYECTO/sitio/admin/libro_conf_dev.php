@@ -8,6 +8,9 @@ include 'flexnav_admin.php';
 <table style="margin-top: 10%">
         <thead>
             <td>
+            ID aluguer
+            </td>
+            <td>
             ID
             </td>
             <td>
@@ -21,7 +24,7 @@ include 'flexnav_admin.php';
             <tr> 
 <?php
 include '../php/mysqlcon.php';
-$result=mysqli_query($conn,"select id_devolucion,ISBN,usuario,devolto_en from libro_devolto where confirmado=0");
+$result=mysqli_query($conn,"select id_aluguer,id_devolucion,ISBN,usuario,devolto_en from libro_devolto where confirmado=0");
 while ($row = mysqli_fetch_assoc($result)) {
     echo '<form method="post" action="libro_conf_dev.php">';
 

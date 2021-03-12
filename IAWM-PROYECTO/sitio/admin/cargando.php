@@ -1,7 +1,7 @@
 <?php
 include '../php/redirect.php';
     echo "Cargando...";
-    sleep(3); 
+    sleep(1); 
     unset($_SERVER["REQUEST_METHOD"]);
     unset($_POST);
     js_redirect('/admin/libro_mod.php');
