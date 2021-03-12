@@ -1,8 +1,6 @@
 <?php
 include 'redirect.php';
-// You'd put this code at the top of any "protected" page you create
-
-// Always start this first
+//Nos deja proteger la pagina de usuarios sin sesion.
 session_start();
 
 if ( isset( $_SESSION['login'] ) ) {

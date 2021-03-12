@@ -49,7 +49,7 @@ require '../pdf/fpdf.php';
         $ISBN=$row['ISBN'];
         $justificante .="$ISBN\t$titulo    \t$precio €\t$fecha\n";
     }
-$pdf = new FPDF('P','mm',array(220,12000));$pdf->AddPage(); // Define el ancho y alto de la pagina. Altura muy elevada para imitar carrillo de papel. Convertir a tamaño dinamico deberia ser posible.
+$pdf = new FPDF('P','mm',array(220,12000));$pdf->AddPage(); // Define el ancho y alto de la pagina. Altura muy elevada para imitar carrillo de papel. Convertir a tamaño dinamico deberia ser posible. 
 $pdf->SetFont('Courier','',11);
 $pdf->Write(12,iconv('UTF-8', 'windows-1252', $justificante)); // FPDF requiere que la string sean convertidas a el formato nativo de la fuente que se va a usar. 
 $pdf->Output();

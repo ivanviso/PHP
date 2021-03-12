@@ -1,4 +1,6 @@
 <?php
+
+//este fichero autentica y identifica a los administradores.
 session_start();
 $userselect="SELECT contrasinal,admin from usuario where usuario='$username'";
 include 'mysqlcon.php';

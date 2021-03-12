@@ -74,7 +74,7 @@ while ($row = mysqli_fetch_assoc($result)) {
         </tbody>
 </table>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // El formulario utilizando arrays multidimensionales es un resto de la idea original de usar un unico formulario. No se ha cambiado por miedo a introducir errores no obvios a simple vista.
     $ISBN = $_POST['bookarray']['ISBN'];
     $titulo = $_POST['bookarray']['titulo'];
     $editorial = $_POST['bookarray']['editorial'];
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $foto = $_POST['bookarray']['foto'];
     $prezo_aluguer = $_POST['bookarray']['prezo_aluguer'];
     $prezo = $_POST['bookarray']['prezo'];
-    if (isset($_POST['bookarray']['venda'])) {
+    if (isset($_POST['bookarray']['venda'])) { // con esto podemos identificar las checkboxes
         $venda = 1;
 
     } else {
@@ -95,9 +95,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $aluguer = 0;
     }
-
-    mysqli_query($conn, "REPLACE INTO libro_aluguer (ISBN,titulo,cantidade,descripcion,editorial,prezo,prezo_aluguer,foto,venda,aluguer) values ($ISBN,'$titulo',$cantidade,'$descripcion','$editorial',$prezo,$prezo_aluguer,'$foto',$venda,$aluguer)");
-    js_redirect('/admin/cargando.php');
+    
+    mysqli_query($conn, "REPLACE INTO libro_aluguer (ISBN,titulo,cantidade,descripcion,editorial,prezo,prezo_aluguer,foto,venda,aluguer) values ($ISBN,'$titulo',$cantidade,'$descripcion','$editorial',$prezo,$prezo_aluguer,'$foto',$venda,$aluguer)"); // 
+    js_redirect('/admin/cargando.php'); 
 }
 
 ?>

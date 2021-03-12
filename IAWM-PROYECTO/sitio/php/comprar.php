@@ -1,6 +1,6 @@
 <?php 
 include 'mysqlcon.php';
-// Insertar en compras. 
+// Procesa las compras. 
 session_start();
 
 foreach ($_SESSION['carrito_alquiler'] as $ISBN) {

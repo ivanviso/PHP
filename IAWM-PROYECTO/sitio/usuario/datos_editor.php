@@ -13,10 +13,6 @@ $row = mysqli_fetch_assoc($result);
 ?>
 <?php
 
-if ($_POST['usuario']) {
-    $cambiar = 'Nombre de usuario';
-    $sqlupd = 'usuario';
-}
 
 if ($_POST['pwd']) {
     $cambiar = 'Contraseña';

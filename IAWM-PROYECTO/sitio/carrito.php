@@ -29,7 +29,6 @@ if (isset($_POST['ISBNc'])) {
 include 'php/mysqlcon.php';
 include 'php/flexnav.php';
 
-// First parameter is just return of "mysqli_connect()" function
 echo
 "<table class='catalogo' border='1' style='margin-top: 15%;'>",
     '<thead>
@@ -64,7 +63,6 @@ if (isset($_SESSION['carrito_compra'])) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>", $row['titulo'], "</td>";
-            //echo "<td>",$row['cantidade'],"</td>"; Interesa mostrarlo??
             echo "<td>", $row['descripcion'], "</td>";
             echo "<td>", $row['prezo'], "€", "</td>";
             echo "<td>", "<img src=", $row['foto'], ">", "</td>";
@@ -72,5 +70,4 @@ if (isset($_SESSION['carrito_compra'])) {
     }
 }
 
-//var_dump($_SESSION['carrito_compra'],$_SESSION['carrito_alquiler']);
 ?>

@@ -5,7 +5,7 @@ session_start();
 $usuario = $_SESSION['usuario'];
 $sqlupd = $_SESSION['sqlu'];
 if ($_POST['nov_data']) {
-    if ($_POST['v1'] == $_POST['v2']) {
+    if ($_POST['v1'] == $_POST['v2']) { // comprobamos que ambas columnas son iguales.
         $val = $_POST['v1'];
         $sql = "UPDATE usuario set $sqlupd='$val' where usuario='$usuario'";
         mysqli_query($conn, $sql);
